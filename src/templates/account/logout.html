@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block head_title %}Logout | {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+<div class='container'>
+	<div class='row text-center verticle-middle-sm'>
+		<div>
+			<h1>Logged Out.</h1>
+			<p>Thanks for spending some quality time with the website today.</p>
+			<hr/>
+			<p><a href="{% url 'account:user_login' %}">Log in</a> again</p>
+		</div>
+	</div>
+</div>
+{% endblock content %}

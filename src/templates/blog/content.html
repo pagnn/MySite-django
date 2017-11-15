@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block head_title %}Blog | {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+<div class='container'>
+	<div class='row'>
+		<div class='col-md-8 col-md-offset-2'>
+			<h1>{{ object.title }}</h1>
+			<h3>{{ object.author.username }} | {{ object.publish }}</h3>
+			<p>{{ object.body }}</p>
+		</div>
+	</div>
+</div>
+{% endblock content %}

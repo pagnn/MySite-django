@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block head_title %}Blog | {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+<div class='container'>
+	<div class='row'>
+		<div class='col-md-8 col-md-offset-2'>
+			<h1>我的博客</h1>
+			<div>
+				{% for obj in object_list %}
+					<a href='{{ obj.id }}'><li>{{ obj.title }}</li></a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}

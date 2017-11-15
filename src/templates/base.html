@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<title>{% block head_title %}FindPagnn{% endblock head_title %}</title>
+		<link rel='stylesheet' href="{% static 'css/bootstrap.css' %}">
+	</head>
+	<body>
+		{% include 'header.html' %}
+		{% block content %}
+		{% endblock content %}
+		{% include 'footer.html' %}
+		<script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	</body>
+</html>
